@@ -12,7 +12,7 @@ export default function Index(props){
         <>
         <Suspense fallback={null}>
         <pointLight position={[-10, -10, -10]} intensity={1} />
-        <ambientLight intensity={0.4} />
+        <ambientLight intensity={0.4}/>
         <spotLight
           castShadow
           angle={0.3}
@@ -22,11 +22,10 @@ export default function Index(props){
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />
-            <mesh ref={ref}>
+            <mesh ref={ref} castShadow receiveShadow >
                 <icosahedronBufferGeometry attach="geometry" args={[1,6]} />
-                <shaderMaterial args={[Shader]} />
+                <shaderMaterial args={[Shader]}/>
             </mesh>
-            <Background />
         </Suspense>
         
         </>
