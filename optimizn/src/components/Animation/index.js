@@ -6,8 +6,7 @@ import {useFrame} from '@react-three/fiber'
 export default function Index(props){
     const ref = useRef();
     useFrame(({clock})=>{
-        console.log(ref.current.material)
-        ref.current.material.uniforms.uTime.value = clock.getElapsedTime();
+        ref.current.material.uniforms.uTime.value = clock.getElapsedTime() * 0.2;
     })
     return (
         <>
