@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/optimizn/static/css/main.08032cb5.chunk.css",
+    "main.js": "/optimizn/static/js/main.a65fb0a1.chunk.js",
+    "main.js.map": "/optimizn/static/js/main.a65fb0a1.chunk.js.map",
+    "runtime-main.js": "/optimizn/static/js/runtime-main.b81b4ef1.js",
+    "runtime-main.js.map": "/optimizn/static/js/runtime-main.b81b4ef1.js.map",
+    "static/js/2.73d22d15.chunk.js": "/optimizn/static/js/2.73d22d15.chunk.js",
+    "static/js/2.73d22d15.chunk.js.map": "/optimizn/static/js/2.73d22d15.chunk.js.map",
+    "static/js/3.88f035e1.chunk.js": "/optimizn/static/js/3.88f035e1.chunk.js",
+    "static/js/3.88f035e1.chunk.js.map": "/optimizn/static/js/3.88f035e1.chunk.js.map",
+    "index.html": "/optimizn/index.html",
+    "static/css/main.08032cb5.chunk.css.map": "/optimizn/static/css/main.08032cb5.chunk.css.map",
+    "static/js/2.73d22d15.chunk.js.LICENSE.txt": "/optimizn/static/js/2.73d22d15.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b81b4ef1.js",
+    "static/js/2.73d22d15.chunk.js",
+    "static/css/main.08032cb5.chunk.css",
+    "static/js/main.a65fb0a1.chunk.js"
+  ]
+}
