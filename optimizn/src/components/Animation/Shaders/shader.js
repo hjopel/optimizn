@@ -10,13 +10,11 @@ const Shader = {
     },
     vertexShader: `
     //
+    //many thanks to Victor Vergara for the inspiration & initial shader
   // GLSL textureless classic 3D noise "cnoise",
   // with an RSL-style periodic variant "pnoise".
   // Author:  Stefan Gustavson (stefan.gustavson@liu.se)
   // Version: 2011-10-11
-  //
-  // Many thanks to Ian McEwan of Ashima Arts for the
-  // ideas for permutation and gradient selection.
   //
   // Copyright (c) 2011 Stefan Gustavson. All rights reserved.
   // Distributed under the MIT license. See LICENSE file.
@@ -229,7 +227,7 @@ const Shader = {
 
     r = cos(qnoise + uColor.x + tan(uTime * 0.8));
     g = cos(qnoise + uColor.y + cos(uTime));
-    b = cos(qnoise + uColor.z + sin(uTime));
+    b = cos(qnoise + uColor.z + sin(uTime * 8.0));
     
     gl_FragColor = vec4(r, g, b, 1.0);
   }

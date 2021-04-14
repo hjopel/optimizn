@@ -3,12 +3,20 @@ import { useRef } from 'react'
 import Background from './Background'
 import {Shader} from './Shaders/shader'
 import {useFrame} from '@react-three/fiber'
-import { Text } from '@react-three/drei';
+import { Text, PerspectiveCamera, OrbitControls, useHelper} from '@react-three/drei';
+
+import { CameraHelper, MathUtils, Camera } from 'three';
 export default function Index(props){
     const ref = useRef();
+    const camRef = useRef();
     useFrame(({clock})=>{
-        ref.current.material.uniforms.uTime.value = clock.getElapsedTime() * 0.2;
+        const elapsed = clock.getElapsedTime();
+        const delta = clock.getDelta()
+        ref.current.material.uniforms.uTime.value = elapsed * 0.2;
+        // camRef.current.position.x = camRef.current.position.x * Math.cos(0.02) + camRef.current.position.z * Math.sin(0.02);
+        // camRef.current.position.z = camRef.current.position.z * Math.cos(0.02) - camRef.current.position.x * Math.sin(0.02);
     })
+    // useHelper(camRef, CameraHelper, 1, 'hotpink')
     return (
         <>
         <pointLight position={[-10, -10, -10]} intensity={1} />
@@ -32,7 +40,7 @@ export default function Index(props){
                 color={'#000000'}
                 fontSize={0.8}
                 >
-                optimizn.
+                {'optimizn.'}
             </Text>
             <Text
                 position={[-1.5, -1.0, 0.0]}

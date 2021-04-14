@@ -1,20 +1,30 @@
 import './App.css';
-import { Canvas } from '@react-three/fiber';
-import {OrbitControls} from '@react-three/drei'
-import { useRef, useCallback } from 'react';
-import Animation from './components/Animation';
-
+import Home from './components/Home.js'
+import Navigation from './components/Nav.js'
+import About from './components/About.js'
+import Contact from './components/Contact.js'
+import Projects from './components/Projects.js'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 function App() {
-  const mouse = useRef([0,0])
-    const onMouseMove = useCallback(({clientX: x, clientY: y})=> (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), []);
+  
   return (
-    <div onMouseMove={onMouseMove} style={{ width: "100vw", height: "100vh" }}>
-
-      <Canvas>
-        <OrbitControls />
-        <Animation />
-      </Canvas>
-      </div>
+    <Router>
+      <Navigation />
+      <Switch> 
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/contact'>
+          <Contact />
+        </Route>
+        <Route path='/projects'>
+          <Projects />
+        </Route>
+      </Switch>
+    </Router>
 
   );
 }
